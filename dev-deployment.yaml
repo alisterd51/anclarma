@@ -27,7 +27,7 @@ spec:
         app: dev
     spec:
       containers:
-      - image: wil42/playground:v2
+      - image: wil42/playground:v1
         name: dev
         resources: {}
         ports:
