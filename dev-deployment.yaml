@@ -3,7 +3,6 @@ kind: Service
 metadata:
   name: dev
 spec:
-  type: NodePort
   selector:
     app: dev
   ports:
