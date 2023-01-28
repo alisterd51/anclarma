@@ -21,4 +21,6 @@ spec:
       - image: wil42/playground:v1
         name: dev
         resources: {}
+        ports:
+          - containerPort: 8888
 ---
