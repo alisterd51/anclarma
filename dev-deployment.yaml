@@ -1,0 +1,24 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: dev
+  name: dev
+  namespace: dev
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dev
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: dev
+    spec:
+      containers:
+      - image: wil42/playground
+        name: dev
+        resources: {}
+---
