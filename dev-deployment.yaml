@@ -8,6 +8,7 @@ spec:
     app: dev
   ports:
   - port: 8888
+    NodePort: 8888
 ---
 apiVersion: apps/v1
 kind: Deployment
