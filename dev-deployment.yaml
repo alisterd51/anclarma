@@ -1,35 +1,20 @@
-apiVersion: v1
-kind: Service
-metadata:
-  name: dev
-spec:
-  selector:
-    app: dev
-  ports:
-  - port: 8888
----
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  labels:
-    app: dev
-  name: dev
-  namespace: dev
+  name: playground
 spec:
   replicas: 1
+  revisionHistoryLimit: 2
   selector:
     matchLabels:
-      app: dev
-  strategy: {}
+      app: playground
   template:
     metadata:
       labels:
-        app: dev
+        app: playground
     spec:
       containers:
       - image: wil42/playground:v1
-        name: dev
-        resources: {}
+        name: playground
         ports:
-          - containerPort: 8888
----
+        - containerPort: 8888
